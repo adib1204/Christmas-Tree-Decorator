@@ -8,16 +8,9 @@ package main;
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
-import javafx.animation.Animation;
-import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.util.Duration;
 
 public class Main_PageController implements Initializable {
     
