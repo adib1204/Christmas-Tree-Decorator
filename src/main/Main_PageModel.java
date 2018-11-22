@@ -13,7 +13,7 @@ public class Main_PageModel {
 
     public void createCircle( AnchorPane bg){
         int[] a;
-        Circle c[] = new Circle[2000]; 
+        Circle c[] = new Circle[4000]; 
         for (int i = 0; i < c.length; i++) {
             c[i] = new Circle(1, 1, 1);
             c[i].setRadius(random.nextDouble() * 5);
