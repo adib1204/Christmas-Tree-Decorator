@@ -1,0 +1,30 @@
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+# eclipse project file
+/.settings/
+/.classpath
+/.project
+
+# NetBeans specific
+**/build/
+**/nbbuild/
+**/nbproject/
+**/dist/
+/nbdist/
+/nbactions.xml
+/nb-configuration.xml
+
+build.xml
+manifest.mf
