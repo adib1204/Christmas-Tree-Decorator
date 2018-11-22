@@ -19,6 +19,7 @@ public class TestChristmas extends Application {
         stage.setTitle("Christmas Tree Decorator");
         stage.getIcons().add(new Image("res/icon.png"));
         stage.setResizable(false);
+        stage.setMaximized(false);
         stage.show();
     }
     public static void main(String[] args) {

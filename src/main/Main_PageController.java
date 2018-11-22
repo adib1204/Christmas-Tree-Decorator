@@ -6,7 +6,6 @@
 package main;
 
 import java.net.URL;
-import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,7 +18,6 @@ public class Main_PageController implements Initializable {
     
     private Main_PageModel mpm;
     
-    private Random random = new Random();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         mpm = new Main_PageModel();

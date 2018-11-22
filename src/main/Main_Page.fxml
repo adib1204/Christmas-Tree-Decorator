@@ -5,13 +5,13 @@
 
 <AnchorPane id="AnchorPane" fx:id="tree" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
    <children>
-      <AnchorPane prefHeight="576.0" prefWidth="104.0" style="-fx-background-color: #ff0000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="920.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="576.0" prefWidth="104.0" style="-fx-background-color: #ff0000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="26.0" layoutY="37.0" mnemonicParsing="false" text="Button" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" />
-            <Button layoutX="26.0" layoutY="81.0" mnemonicParsing="false" text="Button" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" />
+            <Button layoutX="26.0" layoutY="37.0" mnemonicParsing="false" text="Gift" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" />
+            <Button layoutX="26.0" layoutY="81.0" mnemonicParsing="false" text="Bell" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="130.0" layoutY="524.0" prefHeight="120.0" prefWidth="920.0" style="-fx-background-color: #0000ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="456.0" />
-      <AnchorPane fx:id="bg" layoutX="132.0" prefHeight="456.0" prefWidth="920.0" style="-fx-background-image: url(&quot;/res/bg.jpg&quot;); -fx-background-size: stretch;" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="bg" layoutX="132.0" prefHeight="456.0" prefWidth="920.0" style="-fx-background-image: url(&quot;/res/bg.jpg&quot;); -fx-background-size: cover;" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="130.0" layoutY="524.0" prefHeight="120.0" prefWidth="920.0" style="-fx-background-color: #0000ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>
