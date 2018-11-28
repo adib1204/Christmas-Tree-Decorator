@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class TestChristmas extends Application {
@@ -12,7 +13,6 @@ public class TestChristmas extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Main_Page.fxml"));
-        
         Scene scene = new Scene(root,1024,576);
         
         stage.setScene(scene);
@@ -21,6 +21,7 @@ public class TestChristmas extends Application {
         stage.setResizable(false);
         stage.setMaximized(false);
         stage.show();
+        ImageView iv = new ImageView();
     }
     public static void main(String[] args) {
         launch(args);

@@ -17,7 +17,7 @@ public class Main_PageModel {
         for (int i = 0; i < c.length; i++) {
             c[i] = new Circle(1, 1, 1);
             c[i].setRadius(random.nextDouble() * 5);
-            Color color = Color.web("#fff", random.nextDouble());
+            Color color = Color.web("#f0f0f0", random.nextDouble());
             
             c[i].setFill(color);
             bg.getChildren().add(c[i]);
@@ -30,7 +30,7 @@ public class Main_PageModel {
        
         TranslateTransition tt= new TranslateTransition(Duration.seconds(time), c);
         tt.fromYProperty().setValue(-100);
-        tt.setToY(456); //Background height = 456
+        tt.setToY(576); //Background height = 576
         tt.setToX(random.nextDouble() * c.getCenterX());
         tt.onFinishedProperty().setValue(e ->{
                         Raining(c);
