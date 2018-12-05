@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="tree" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
    <children>
-      <AnchorPane prefHeight="576.0" prefWidth="104.0" style="-fx-background-color: #ff0000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="920.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="bar" prefHeight="576.0" prefWidth="200.0" style="-fx-background-color: INDIGO;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="824.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="26.0" layoutY="37.0" mnemonicParsing="false" text="Button" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" />
-            <Button layoutX="26.0" layoutY="81.0" mnemonicParsing="false" text="Button" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" />
+            <Button fx:id="b1" layoutX="26.0" layoutY="37.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Hide Butang 2&amp;3" />
+            <Button fx:id="b2" layoutX="25.0" layoutY="97.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Preset 2" />
+            <Button fx:id="b3" layoutX="25.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Preset 3" />
+            <Button fx:id="b4" layoutX="25.0" layoutY="217.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Light Animation(kosong)" />
+            <Button fx:id="b5" layoutX="25.0" layoutY="275.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Pokok" />
+            <Button fx:id="b6" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Background" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="130.0" layoutY="524.0" prefHeight="120.0" prefWidth="920.0" style="-fx-background-color: #0000ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="456.0" />
-      <AnchorPane fx:id="bg" layoutX="132.0" prefHeight="456.0" prefWidth="920.0" style="-fx-background-image: url(&quot;/res/bg.jpg&quot;); -fx-background-size: stretch;" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="bg" layoutX="200.0" prefHeight="576.0" prefWidth="824.0" style="-fx-background-size: stretch;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="pokok" fitHeight="550.0" fitWidth="259.0" layoutX="283.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="282.0" />
+         </children></AnchorPane>
    </children>
 </AnchorPane>

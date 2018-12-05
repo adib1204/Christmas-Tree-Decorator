@@ -30,7 +30,7 @@ public class Main_PageModel {
        
         TranslateTransition tt= new TranslateTransition(Duration.seconds(time), c);
         tt.fromYProperty().setValue(-100);
-        tt.setToY(456); //Background height = 456
+        tt.setToY(576); //Background height = 576
         tt.setToX(random.nextDouble() * c.getCenterX());
         tt.onFinishedProperty().setValue(e ->{
                         Raining(c);
