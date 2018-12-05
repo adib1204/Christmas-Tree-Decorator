@@ -11,9 +11,9 @@
             <Button fx:id="b1" layoutX="26.0" layoutY="37.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Hide Butang 2&amp;3" />
             <Button fx:id="b2" layoutX="25.0" layoutY="97.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Preset 2" />
             <Button fx:id="b3" layoutX="25.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Preset 3" />
-            <Button layoutX="25.0" layoutY="217.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Light Animation(kosong)" />
-            <Button layoutX="25.0" layoutY="275.0" mnemonicParsing="false" onAction="#tukarPokok" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Pokok" />
-            <Button layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#tukarbg" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Background" />
+            <Button fx:id="b4" layoutX="25.0" layoutY="217.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Light Animation(kosong)" />
+            <Button fx:id="b5" layoutX="25.0" layoutY="275.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Pokok" />
+            <Button fx:id="b6" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Background" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="bg" layoutX="200.0" prefHeight="576.0" prefWidth="824.0" style="-fx-background-size: stretch;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
