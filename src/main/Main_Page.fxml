@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -16,9 +18,15 @@
             <Button fx:id="b6" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Background" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="bg" layoutX="200.0" prefHeight="576.0" prefWidth="824.0" style="-fx-background-size: stretch;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="bg" layoutX="200.0" onMouseMoved="#showposition" prefHeight="576.0" prefWidth="824.0" style="-fx-background-size: stretch;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="pokok" fitHeight="550.0" fitWidth="259.0" layoutX="283.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="282.0" />
+            <ImageView fx:id="pokok" fitHeight="550.0" fitWidth="259.0" layoutX="283.0" layoutY="26.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="282.0">
+               <image>
+                  <Image url="@../res/img/pokok1.png" />
+               </image></ImageView>
+            <ImageView fx:id="or1" fitHeight="30.0" fitWidth="30.0" layoutX="383.0" layoutY="236.0" pickOnBounds="true" scaleZ="0.0" />
+            <Label fx:id="lb1" layoutX="7.0" layoutY="6.0" />
+            <Label fx:id="lb2" layoutX="7.0" layoutY="26.0" />
          </children></AnchorPane>
    </children>
 </AnchorPane>

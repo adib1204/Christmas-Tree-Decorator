@@ -12,7 +12,6 @@ public class Main_PageModel {
     private Random random = new Random();
 
     public void createCircle( AnchorPane bg){
-        int[] a;
         Circle c[] = new Circle[2000]; 
         for (int i = 0; i < c.length; i++) {
             c[i] = new Circle(1, 1, 1);
@@ -29,8 +28,8 @@ public class Main_PageModel {
         int time = 10 + random.nextInt(50);
        
         TranslateTransition tt= new TranslateTransition(Duration.seconds(time), c);
-        tt.fromYProperty().setValue(-100);
-        tt.setToY(576); //Background height = 576
+        tt.fromYProperty().setValue(676);
+        tt.setToY(0); //Background height = 576
         tt.setToX(random.nextDouble() * c.getCenterX());
         tt.onFinishedProperty().setValue(e ->{
                         Raining(c);
