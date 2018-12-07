@@ -17,7 +17,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import res.Index;
+import res.enumfile.TREE;
 
 public class Main_PageController implements Initializable {
 
@@ -52,7 +52,52 @@ public class Main_PageController implements Initializable {
         g1 = new Group();
         g1.getChildren().addAll(b2, b3);
         bar.getChildren().addAll(g1);
-        bg.setStyle(" -fx-background-image:url(/res/img/bg1.jpg);-fx-background-size:stretch");
+        //bg.setStyle(" -fx-background-image:url(/res/img/bg1.jpg);-fx-background-size:stretch");
+    }
+
+    private void tukarbg() {
+        switch (tukarBg) {
+            case 1:
+                bg.setId("bg2");
+                tukarBg = 2;
+                break;
+            case 2:
+                bg.setId("bg3");
+                tukarBg = 3;
+                break;
+            case 3:
+                bg.setId("bg1");
+                tukarBg = 1;
+                break;
+        }
+    }
+    
+    private void tukarPokok() {
+        
+        switch (tukarPokok) {
+            case 1:
+                pokok.setImage(TREE.TREE2.getImage());
+                tukarPokok = 2;
+                break;
+            case 2:
+                pokok.setImage(TREE.TREE3.getImage());
+                tukarPokok = 3;
+                break;
+            case 3:
+                pokok.setImage(TREE.TREE1.getImage());
+                tukarPokok = 1;
+                break;
+            default:
+                System.out.println("");
+        }
+    }
+
+    @FXML
+    private void showposition(MouseEvent event) {
+        String x = Double.toString(event.getX());
+        String y = Double.toString(event.getY());
+        lb1.setText("X: "+x);
+        lb2.setText("Y: "+y);
     }
 
     @FXML
@@ -70,7 +115,9 @@ public class Main_PageController implements Initializable {
                 }
                 break;
             case "b2":
-                or1.setImage(Index.BULB1);
+                Button b = new Button("pos");
+                System.out.println(bg.getId());
+                bg.getChildren().add(b);
             case "b5":
                 tukarPokok();
                 break;
@@ -80,51 +127,5 @@ public class Main_PageController implements Initializable {
             default:
                 throw new AssertionError();
         }
-
-    }
-
-    private void tukarbg() {
-        switch (tukarBg) {
-            case 1:
-                bg.setStyle(Index.BG2);
-                tukarBg = 2;
-                break;
-            case 2:
-                bg.setStyle(Index.BG3);
-                tukarBg = 3;
-                break;
-            case 3:
-                bg.setStyle(Index.BG1);
-                tukarBg = 1;
-                break;
-        }
-    }
-    
-    private void tukarPokok() {
-        
-        switch (tukarPokok) {
-            case 1:
-                pokok.setImage(Index.TREE2);
-                tukarPokok = 2;
-                break;
-            case 2:
-                pokok.setImage(Index.TREE3);
-                tukarPokok = 3;
-                break;
-            case 3:
-                pokok.setImage(Index.TREE1);
-                tukarPokok = 1;
-                break;
-            default:
-                throw new AssertionError();
-        }
-    }
-
-    @FXML
-    private void showposition(MouseEvent event) {
-        String x = Double.toString(event.getX());
-        String y = Double.toString(event.getY());
-        lb1.setText("X: "+x);
-        lb2.setText("Y: "+y);
     }
 }

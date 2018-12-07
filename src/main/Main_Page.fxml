@@ -2,23 +2,26 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
+<AnchorPane prefHeight="576.0" prefWidth="1024.0" stylesheets="@../res/Decorate.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
    <children>
-      <AnchorPane fx:id="bar" prefHeight="576.0" prefWidth="200.0" style="-fx-background-color: INDIGO;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="824.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane id="menubar" fx:id="bar" layoutY="25.0" prefHeight="576.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="824.0" AnchorPane.topAnchor="25.0">
          <children>
-            <Button fx:id="b1" layoutX="26.0" layoutY="37.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Hide Butang 2&amp;3" />
-            <Button fx:id="b2" layoutX="25.0" layoutY="97.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Preset 2" />
-            <Button fx:id="b3" layoutX="25.0" layoutY="159.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Preset 3" />
-            <Button fx:id="b4" layoutX="25.0" layoutY="217.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Light Animation(kosong)" />
-            <Button fx:id="b5" layoutX="25.0" layoutY="275.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Pokok" />
-            <Button fx:id="b6" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" style="-fx-background-radius: 10px;" text="Tukar Background" />
+            <Button id="b1" fx:id="b1" layoutX="26.0" layoutY="37.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Hide Butang 2&amp;3" />
+            <Button id="b2" fx:id="b2" layoutX="25.0" layoutY="97.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Preset 2" />
+            <Button id="b3" fx:id="b3" layoutX="25.0" layoutY="159.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Preset 3" />
+            <Button id="b4" fx:id="b4" layoutX="25.0" layoutY="217.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="148.0" text="Light Animation(kosong)" />
+            <Button id="b5" fx:id="b5" layoutX="25.0" layoutY="275.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Tukar Pokok" />
+            <Button id="b6" fx:id="b6" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Tukar Background" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="bg" layoutX="200.0" onMouseMoved="#showposition" prefHeight="576.0" prefWidth="824.0" style="-fx-background-size: stretch;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane id="bg1" fx:id="bg" layoutX="200.0" onMouseMoved="#showposition" prefHeight="576.0" prefWidth="824.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
          <children>
             <ImageView fx:id="pokok" fitHeight="550.0" fitWidth="259.0" layoutX="283.0" layoutY="26.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="282.0">
                <image>
@@ -28,5 +31,24 @@
             <Label fx:id="lb1" layoutX="7.0" layoutY="6.0" />
             <Label fx:id="lb2" layoutX="7.0" layoutY="26.0" />
          </children></AnchorPane>
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

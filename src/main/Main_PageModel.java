@@ -20,10 +20,10 @@ public class Main_PageModel {
             
             c[i].setFill(color);
             bg.getChildren().add(c[i]);
-            Raining(c[i]);
+            Raining(c[i],bg);
         }   
     }    
-    private void Raining(Circle c) {
+    private void Raining(Circle c, AnchorPane bg) {
         c.setCenterX(random.nextInt(920));//Background width = 920
         int time = 10 + random.nextInt(50);
        
@@ -32,7 +32,7 @@ public class Main_PageModel {
         tt.setToY(0); //Background height = 576
         tt.setToX(random.nextDouble() * c.getCenterX());
         tt.onFinishedProperty().setValue(e ->{
-                        Raining(c);
+                        Raining(c, bg);
         });
         Animation an = tt;
         an.play();

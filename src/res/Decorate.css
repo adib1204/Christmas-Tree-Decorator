@@ -1,0 +1,91 @@
+#bg1{
+    -fx-background-image: url("img/bg1.jpg");
+    -fx-background-size: stretch;
+}
+
+#bg2{
+    -fx-background-image: url("img/bg2.jpg");
+    -fx-background-size: stretch;
+}
+
+#bg3{
+    -fx-background-image: url("img/bg3.jpg");
+    -fx-background-size: stretch;
+}
+
+#menubar{
+    -fx-background-color: #43b0d0;
+}
+
+#b1{
+    -fx-background-radius: 15;
+    -fx-background-color: #29efff;
+    -fx-text-fill: #000060;
+    -fx-font-type: 'sans-serif';
+    -fx-font-size: 12; 
+}
+
+#b1:hover{
+    -fx-background-color: #d8d8d8;
+}
+#b2{
+    -fx-background-radius: 15;
+    -fx-background-color: #29efff;
+    -fx-text-fill: #000060;
+    -fx-font-type: 'sans-serif';
+    -fx-font-size: 12; 
+}
+
+#b2:hover{
+    -fx-background-color: #d8d8d8;
+}
+
+#b3{
+    -fx-background-radius: 15;
+    -fx-background-color: #29efff;
+    -fx-text-fill: #000060;
+    -fx-font-type: 'sans-serif';
+    -fx-font-size: 12; 
+}
+
+#b3:hover{
+    -fx-background-color: #d8d8d8;
+}
+
+#b4{
+    -fx-background-radius: 15;
+    -fx-background-color: #29efff;
+    -fx-text-fill: #000060;
+    -fx-font-type: 'sans-serif';
+    -fx-font-size: 12; 
+}
+
+#b4:hover{
+    -fx-background-color: #d8d8d8;
+}
+
+#b5{
+    -fx-background-radius: 15;
+    -fx-background-color: #29efff;
+    -fx-text-fill: #000060;
+    -fx-font-type: 'sans-serif';
+    -fx-font-size: 12; 
+}
+
+#b5:hover{
+    -fx-background-color: #d8d8d8;
+}
+
+#b6{
+    -fx-background-radius: 15;
+    -fx-background-color: #29efff;
+    -fx-text-fill: #000060;
+    -fx-font-type: 'sans-serif';
+    -fx-font-size: 12; 
+}
+
+#b6:hover{
+    -fx-background-color: #d8d8d8;
+}
+
+
