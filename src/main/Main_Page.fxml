@@ -8,6 +8,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
 
 <AnchorPane prefHeight="576.0" prefWidth="1024.0" stylesheets="@../res/Decorate.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
    <children>
@@ -30,6 +32,13 @@
             <ImageView fx:id="or1" fitHeight="30.0" fitWidth="30.0" layoutX="383.0" layoutY="236.0" pickOnBounds="true" scaleZ="0.0" />
             <Label fx:id="lb1" layoutX="7.0" layoutY="6.0" />
             <Label fx:id="lb2" layoutX="7.0" layoutY="26.0" />
+            <StackPane fx:id="PaneLampu" layoutX="57.0" layoutY="23.0" prefHeight="40.0" prefWidth="51.0">
+               <children>
+                  <Circle fx:id="circleBesar" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: PINK;" />
+                  <Circle fx:id="circleKecik" fill="DODGERBLUE" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+               </children>
+            </StackPane>
+            <ImageView fx:id="olaf" fitHeight="232.0" fitWidth="148.0" layoutX="676.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" />
          </children></AnchorPane>
       <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -43,7 +52,7 @@
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu fx:id="music" mnemonicParsing="false" text="Play Music">
             <items>
               <MenuItem mnemonicParsing="false" text="About" />
             </items>

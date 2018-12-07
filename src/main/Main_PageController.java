@@ -13,10 +13,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Circle;
 import res.enumfile.TREE;
 
 public class Main_PageController implements Initializable {
@@ -43,6 +46,16 @@ public class Main_PageController implements Initializable {
     private Label lb2;
     @FXML
     private Label lb1;
+    @FXML
+    private StackPane PaneLampu;
+    @FXML
+    private Circle circleBesar;
+    @FXML
+    private Circle circleKecik;
+    @FXML
+    private Menu music;
+    @FXML
+    private ImageView olaf;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -52,6 +65,8 @@ public class Main_PageController implements Initializable {
         g1 = new Group();
         g1.getChildren().addAll(b2, b3);
         bar.getChildren().addAll(g1);
+        olaf.setImage(new Image("res/img/olaf.jpg"));
+        olaf.setPreserveRatio(false);
         //bg.setStyle(" -fx-background-image:url(/res/img/bg1.jpg);-fx-background-size:stretch");
     }
 
