@@ -14,78 +14,20 @@
 }
 
 #menubar{
-    -fx-background-color: #43b0d0;
+    -fx-background-color: #a8026f;
 }
 
-#b1{
+#b1,#b2,#b3,#b4,#b5,#b6
+{
     -fx-background-radius: 15;
-    -fx-background-color: #29efff;
-    -fx-text-fill: #000060;
+    -fx-background-color: #db2d43;
+    -fx-text-fill: #fbd5af;
     -fx-font-type: 'sans-serif';
-    -fx-font-size: 12; 
+    -fx-font-size: 16; 
 }
 
-#b1:hover{
-    -fx-background-color: #d8d8d8;
+#b1:pressed,#b2:pressed,#b3:pressed,#b4:pressed,#b5:pressed,#b6:pressed
+{
+    -fx-background-color: #e76838;
+    -fx-text-fill: #db2d43;
 }
-#b2{
-    -fx-background-radius: 15;
-    -fx-background-color: #29efff;
-    -fx-text-fill: #000060;
-    -fx-font-type: 'sans-serif';
-    -fx-font-size: 12; 
-}
-
-#b2:hover{
-    -fx-background-color: #d8d8d8;
-}
-
-#b3{
-    -fx-background-radius: 15;
-    -fx-background-color: #29efff;
-    -fx-text-fill: #000060;
-    -fx-font-type: 'sans-serif';
-    -fx-font-size: 12; 
-}
-
-#b3:hover{
-    -fx-background-color: #d8d8d8;
-}
-
-#b4{
-    -fx-background-radius: 15;
-    -fx-background-color: #29efff;
-    -fx-text-fill: #000060;
-    -fx-font-type: 'sans-serif';
-    -fx-font-size: 12; 
-}
-
-#b4:hover{
-    -fx-background-color: #d8d8d8;
-}
-
-#b5{
-    -fx-background-radius: 15;
-    -fx-background-color: #29efff;
-    -fx-text-fill: #000060;
-    -fx-font-type: 'sans-serif';
-    -fx-font-size: 12; 
-}
-
-#b5:hover{
-    -fx-background-color: #d8d8d8;
-}
-
-#b6{
-    -fx-background-radius: 15;
-    -fx-background-color: #29efff;
-    -fx-text-fill: #000060;
-    -fx-font-type: 'sans-serif';
-    -fx-font-size: 12; 
-}
-
-#b6:hover{
-    -fx-background-color: #d8d8d8;
-}
-
-
