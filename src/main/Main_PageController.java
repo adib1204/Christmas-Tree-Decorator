@@ -28,6 +28,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Main_PageController implements Initializable {
@@ -105,16 +106,7 @@ public class Main_PageController implements Initializable {
         String source = menu.getId();
         switch (source) {
             case "factory":
-                Stage stage = new Stage();
-
-                Parent root = FXMLLoader.load(getClass().getResource("Selection_Page.fxml"));
-
-                Scene scene = new Scene(root, 600, 400);
-                stage.setScene(scene);
-                stage.setResizable(false);
-                stage.setMaximized(false);
-                stage.setTitle("New Christmas Tree");
-                stage.show();
+                setNewWindow();
 
                 break;
             case "close":
@@ -129,6 +121,20 @@ public class Main_PageController implements Initializable {
             default:
 
         }
+    }
+
+    private void setNewWindow() throws IOException {
+        Stage stage = new Stage();
+        
+        Parent root = FXMLLoader.load(getClass().getResource("Selection_Page.fxml"));
+        
+        Scene scene = new Scene(root, 600, 400);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.setMaximized(false);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("New Christmas Tree");
+        stage.show();
     }
 
     private void initTemplate() {

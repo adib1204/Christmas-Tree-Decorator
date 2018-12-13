@@ -5,11 +5,16 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import res.Index;
+import res.Index.*;
+import dpfactory.Setter;
+import javafx.application.Platform;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 
 public class Selection_PageController implements Initializable {
@@ -20,6 +25,11 @@ public class Selection_PageController implements Initializable {
     private AnchorPane prev;
     @FXML
     private ImageView pokok;
+    @FXML
+    private CheckBox snow;
+    
+    private TREE tree=TREE.TREE1;
+    private boolean snowing=false;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -60,16 +70,36 @@ public class Selection_PageController implements Initializable {
         String src = rb.getId();
         switch (src) {
             case "rtr1":
-                pokok.setImage(Index.TREE.TREE1.getTreeImage());
+                tree = TREE.TREE1;
+                pokok.setImage(tree.getTreeImage());
                 break;
             case "rtr2":
-                pokok.setImage(Index.TREE.TREE2.getTreeImage());
+                tree = TREE.TREE2;
+                pokok.setImage(tree.getTreeImage());
                 break;
             default:
                 
                 break;
                 
         }
+        
+    }
+
+    @FXML
+    private void wantSnow(ActionEvent event) {
+        if(snow.isSelected()) snowing = true;
+        else snowing=false;
+    }
+
+    @FXML
+    private void onClick(ActionEvent event) {
+        Setter.setId(prev.getId());
+        Setter.setSnow(snowing);
+        Setter.setTree(tree.getTreeImage());
+        
+        Button btn = (Button) event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.close();
     }
     
 }
