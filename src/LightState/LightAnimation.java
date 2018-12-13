@@ -16,9 +16,9 @@ public class LightAnimation {
     
     private State lightOn;
     private State lightOff;
-
-  
+    private State lightBlink2;
     private State lightBlink;
+    
     private Circle circle;
     private FillTransition ft;
     
@@ -29,8 +29,8 @@ public class LightAnimation {
         lightOn = new LightOnState(circle, this);
         lightOff = new LightOffState(circle, this);
         lightBlink = new LightBlinkState(circle, this);
+        lightBlink2 = new LightBlink2State(circle, this);
         state = lightOn;
-        
     }
     public void setFt(FillTransition ft) {
         this.ft = ft;
@@ -44,15 +44,15 @@ public class LightAnimation {
       public State getLightOn() {
         return lightOn;
     }
-
     public State getLightOff() {
         return lightOff;
     }
-
     public State getLightBlink() {
         return lightBlink;
     }
-
+    public State getLightBlink2(){
+        return lightBlink2;
+    }
     public void clickButton(){
         state.clickButton();
     }

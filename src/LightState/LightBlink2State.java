@@ -5,8 +5,8 @@
  */
 package LightState;
 
-import javafx.scene.paint.Color;
 import javafx.animation.FillTransition;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
@@ -14,25 +14,27 @@ import javafx.util.Duration;
  *
  * @author FiQa
  */
-public class LightBlinkState implements State{
+public class LightBlink2State implements State{
     
     Circle circle;
     LightAnimation lightAnimation;
     private boolean playAnimation = false;
     
-    public LightBlinkState(Circle circle, LightAnimation lightAnimation){
+    public LightBlink2State(Circle circle, LightAnimation lightAnimation){
         this.circle = circle;
         this.lightAnimation = lightAnimation;
     }
     public void clickButton(){
         
-        FillTransition ft = new FillTransition(Duration.millis(1000), circle, Color.BLUE, Color.YELLOW);
+        FillTransition ft = lightAnimation.getFt();
+        ft.stop();
+            
+        ft = new FillTransition(Duration.millis(300), circle, Color.AQUA, Color.BEIGE);
         ft.setCycleCount(Integer.MAX_VALUE);
         ft.setAutoReverse(true);
         lightAnimation.setFt(ft);
         ft.play();
         
-        lightAnimation.setState(lightAnimation.getLightBlink2());
-        
+        lightAnimation.setState(lightAnimation.getLightOff());
     }
 }

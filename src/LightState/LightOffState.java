@@ -5,6 +5,7 @@
  */
 package LightState;
 
+import dptemplate.Template;
 import javafx.animation.FillTransition;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -29,15 +30,9 @@ public class LightOffState implements State {
         try {
             FillTransition ft = lightAnimation.getFt();
             ft.stop();
-        } catch (NullPointerException e) {
-        }
+        }catch (NullPointerException e) {}
 
-        circle.setFill(Color.BLACK);
+        circle.setFill(Template.getFill());
         lightAnimation.setState(lightAnimation.getLightOn());
-
-//        FillTransition ft = new FillTransition(Duration.millis(1000), circle, Color.BLACK, Color.BLACK);
-//        ft.setCycleCount(Integer.MAX_VALUE);
-//        ft.setAutoReverse(true);
-//        ft.play();
     }
 }

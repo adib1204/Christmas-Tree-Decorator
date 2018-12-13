@@ -105,7 +105,7 @@ public class Main_PageController implements Initializable {
         templateImage.add(ornament);
         templateImage.add(gift);
         
-        tmp = new Template(templateImage);
+        tmp = new Template(templateImage, circle1);
     }
 
     private void initState() {
