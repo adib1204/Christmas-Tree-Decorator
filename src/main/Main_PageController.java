@@ -6,90 +6,56 @@
 package main;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import res.enumfile.TREE;
+import javafx.scene.shape.Circle;
+
+import res.Index.*;
+import dptemplate.Template;
 
 public class Main_PageController implements Initializable {
 
     @FXML
     private AnchorPane bg, bar;
-
     @FXML
     private Button b1, b2, b3, b4, b5, b6;
-
-    private Main_PageModel mpm;
-
-    private Group g1, g2;
-    Button gbtn[];
-
-    private boolean hideButton = false;
-    private int tukarPokok = 1;
-    private int tukarBg = 1;
     @FXML
-    private ImageView pokok;
+    private ImageView pokok,tongkat,ribbon,ornament,olaf,gift,star;
     @FXML
-    private ImageView or1;
+    private Label lb2,lb1;
     @FXML
-    private Label lb2;
+    private Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8;
     @FXML
-    private Label lb1;
+    private Menu music;
+    @FXML
+    private MenuItem factory;
+    
+    //Bawah ni ialah class+library yang akan korang gunakan untuk interact dgn UI
+    //Then dari UI tu masuk design pattern korang
+    
+    //Adib
+    private Template tmp;
+    private ArrayList <ImageView> templateImage;
+      
+    //Ameer
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Button gbtn[] = {b1,b2};
-        mpm = new Main_PageModel();
-        mpm.createCircle(bg);
-        g1 = new Group();
-        g1.getChildren().addAll(b2, b3);
-        bar.getChildren().addAll(g1);
-        //bg.setStyle(" -fx-background-image:url(/res/img/bg1.jpg);-fx-background-size:stretch");
-    }
-
-    private void tukarbg() {
-        switch (tukarBg) {
-            case 1:
-                bg.setId("bg2");
-                tukarBg = 2;
-                break;
-            case 2:
-                bg.setId("bg3");
-                tukarBg = 3;
-                break;
-            case 3:
-                bg.setId("bg1");
-                tukarBg = 1;
-                break;
-        }
-    }
-    
-    private void tukarPokok() {
-        
-        switch (tukarPokok) {
-            case 1:
-                pokok.setImage(TREE.TREE2.getImage());
-                tukarPokok = 2;
-                break;
-            case 2:
-                pokok.setImage(TREE.TREE3.getImage());
-                tukarPokok = 3;
-                break;
-            case 3:
-                pokok.setImage(TREE.TREE1.getImage());
-                tukarPokok = 1;
-                break;
-            default:
-                System.out.println("");
-        }
+        initTemplate();
+        initState();
+        initStrategy();
+        initFacaTon();
+        initFactory();
     }
 
     @FXML
@@ -106,26 +72,59 @@ public class Main_PageController implements Initializable {
         String src = buttonSource.getId();
         switch (src) {
             case "b1":
-                if (hideButton) {
-                    g1.setVisible(true);
-                    hideButton = false;
-                } else {
-                    g1.setVisible(false);
-                    hideButton = true;
-                }
+                tmp.setPresetImage(PRESET.PRESET1);
                 break;
             case "b2":
-                Button b = new Button("pos");
-                System.out.println(bg.getId());
-                bg.getChildren().add(b);
+                tmp.setPresetImage(PRESET.PRESET2);
+                break;
+            case "b3":
+                tmp.setPresetImage(PRESET.PRESET3);
+                break;
+            case "b4":
+                
+                break;
             case "b5":
-                tukarPokok();
+                
                 break;
             case "b6":
-                tukarbg();
+                tmp.clearPreset();
                 break;
             default:
-                throw new AssertionError();
+                //throw new AssertionError();
         }
     }
+
+    private void initTemplate() {
+        //Add element/component of the preset into the array
+        templateImage = new ArrayList<>();
+        templateImage.add(star);
+        templateImage.add(tongkat);
+        templateImage.add(ribbon);
+        templateImage.add(ornament);
+        templateImage.add(gift);
+        
+        tmp = new Template(templateImage);
+    }
+
+    private void initState() {
+        //Bagi semua circle animation sama
+        circle2.fillProperty().bind(circle1.fillProperty());
+        circle3.fillProperty().bind(circle1.fillProperty());
+        circle4.fillProperty().bind(circle1.fillProperty());
+        circle5.fillProperty().bind(circle1.fillProperty());
+        circle6.fillProperty().bind(circle1.fillProperty());
+        circle7.fillProperty().bind(circle1.fillProperty());
+        circle8.fillProperty().bind(circle1.fillProperty());
+    }
+
+    private void initStrategy() {
+    }
+
+    private void initFacaTon() {
+    }
+
+    private void initFactory() {
+    }
+
+
 }
