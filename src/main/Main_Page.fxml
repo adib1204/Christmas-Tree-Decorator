@@ -12,46 +12,53 @@
 
 <AnchorPane prefHeight="576.0" prefWidth="1024.0" stylesheets="@../res/Decorate.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
    <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1024.0" style="-fx-background-color: #f3f9fb;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="factory" mnemonicParsing="false" text="New Christmas Tree" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="music" mnemonicParsing="false" text="Play Music" />
+        </menus>
+      </MenuBar>
       <AnchorPane id="menubar" fx:id="bar" layoutY="25.0" prefHeight="576.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="824.0" AnchorPane.topAnchor="25.0">
          <children>
-            <Button id="b1" fx:id="b1" layoutX="26.0" layoutY="37.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Hide Butang 2&amp;3" />
-            <Button id="b2" fx:id="b2" layoutX="25.0" layoutY="97.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Preset 2" />
-            <Button id="b3" fx:id="b3" layoutX="25.0" layoutY="159.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Preset 3" />
-            <Button id="b4" fx:id="b4" layoutX="25.0" layoutY="217.0" mnemonicParsing="false" onAction="#animation" prefHeight="40.0" prefWidth="148.0" text="Light Animation(kosong)" />
-            <Button id="b5" fx:id="b5" layoutX="25.0" layoutY="275.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Tukar Pokok" />
-            <Button id="b6" fx:id="b6" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="148.0" text="Tukar Background" />
+
+            <Button id="b1" fx:id="b1" layoutX="15.0" layoutY="37.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Preset 1" />
+            <Button id="b2" fx:id="b2" layoutX="15.0" layoutY="97.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Preset 2" />
+            <Button id="b3" fx:id="b3" layoutX="15.0" layoutY="160.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Preset 3" />
+            <Button id="b4" fx:id="b4" layoutX="15.0" layoutY="218.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Light Animation " />
+            <Button id="b5" fx:id="b5" layoutX="15.0" layoutY="276.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Olaf Animation" />
+            <Button id="b6" fx:id="b6" layoutX="15.0" layoutY="333.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Clear Preset" />
          </children>
       </AnchorPane>
       <AnchorPane id="bg1" fx:id="bg" layoutX="200.0" onMouseMoved="#showposition" prefHeight="576.0" prefWidth="824.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
          <children>
-            <ImageView fx:id="pokok" fitHeight="550.0" fitWidth="259.0" layoutX="283.0" layoutY="26.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="282.0">
-               <image>
-                  <Image url="@../res/img/pokok1.png" />
-               </image></ImageView>
-            <ImageView fx:id="or1" fitHeight="30.0" fitWidth="30.0" layoutX="383.0" layoutY="236.0" pickOnBounds="true" scaleZ="0.0" />
             <Label fx:id="lb1" layoutX="7.0" layoutY="6.0" />
             <Label fx:id="lb2" layoutX="7.0" layoutY="26.0" />
-            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="84.0" layoutY="62.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
-            <ImageView fx:id="olaf" fitHeight="232.0" fitWidth="148.0" layoutX="676.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="pokok" fitHeight="500.0" fitWidth="250.0" layoutX="287.0" layoutY="129.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="287.0" AnchorPane.rightAnchor="287.0">
+               <image>
+                  <Image url="@../res/img/tree1.png" />
+               </image></ImageView>
+            <ImageView fx:id="star" fitHeight="60.0" layoutX="381.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="tongkat" fitHeight="45.0" layoutX="390.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ribbon" fitHeight="40.0" layoutX="393.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ornament" fitHeight="40.0" layoutX="397.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="gift" fitHeight="130.0" layoutX="249.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" />
+            <ImageView fx:id="olaf" fitHeight="232.0" fitWidth="148.0" layoutX="676.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@../res/img/olaf.jpg" />
+               </image></ImageView>
+            <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="72.0" layoutY="72.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+            <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="144.0" layoutY="144.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+            <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="216.0" layoutY="72.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+            <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="288.0" layoutY="144.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+            <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="536.0" layoutY="144.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+            <Circle fx:id="circle6" fill="DODGERBLUE" layoutX="608.0" layoutY="72.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+            <Circle fx:id="circle7" fill="DODGERBLUE" layoutX="680.0" layoutY="144.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+            <Circle fx:id="circle8" fill="DODGERBLUE" layoutX="752.0" layoutY="72.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
          </children></AnchorPane>
-      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu fx:id="music" mnemonicParsing="false" text="Play Music">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
    </children>
 </AnchorPane>
