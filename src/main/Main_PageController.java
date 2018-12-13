@@ -31,6 +31,8 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import dpState.LightAnimation;
+
 public class Main_PageController implements Initializable {
 
     @FXML
@@ -53,6 +55,8 @@ public class Main_PageController implements Initializable {
     private ArrayList<ImageView> templateImage;
     
     private Sound sound;
+    LightAnimation lightAnimation;
+    //Ameer
 
     //Ameer
     @Override
@@ -87,7 +91,7 @@ public class Main_PageController implements Initializable {
                 tmp.setPresetImage(PRESET.PRESET3);
                 break;
             case "b4":
-
+                lightAnimation.clickButton();
                 break;
             case "b5":
 
@@ -145,12 +149,14 @@ public class Main_PageController implements Initializable {
         templateImage.add(ribbon);
         templateImage.add(ornament);
         templateImage.add(gift);
-
-        tmp = new Template(templateImage);
+        
+        tmp = new Template(templateImage, circle1);
     }
 
     private void initState() {
+        lightAnimation = new LightAnimation(circle1);
         //Bagi semua circle animation sama
+        
         circle2.fillProperty().bind(circle1.fillProperty());
         circle3.fillProperty().bind(circle1.fillProperty());
         circle4.fillProperty().bind(circle1.fillProperty());
@@ -158,6 +164,14 @@ public class Main_PageController implements Initializable {
         circle6.fillProperty().bind(circle1.fillProperty());
         circle7.fillProperty().bind(circle1.fillProperty());
         circle8.fillProperty().bind(circle1.fillProperty());
+        //Bagi semua visible or invisible
+        circle2.visibleProperty().bind(circle1.visibleProperty());
+        circle3.visibleProperty().bind(circle1.visibleProperty());
+        circle4.visibleProperty().bind(circle1.visibleProperty());
+        circle5.visibleProperty().bind(circle1.visibleProperty());
+        circle6.visibleProperty().bind(circle1.visibleProperty());
+        circle7.visibleProperty().bind(circle1.visibleProperty());
+        circle8.visibleProperty().bind(circle1.visibleProperty());
     }
 
     private void initStrategy() {
