@@ -1,13 +1,14 @@
 package dpfactory;
 
 import javafx.scene.image.Image;
+import res.Index.TREE;
 
 public class Setter {
-    private static Image tree;
+    private static TREE tree;
     private static String id;
     private static boolean snow;
 
-    public static void setTree(Image tree) {
+    public static void setTree(TREE tree) {
         Setter.tree = tree;
     }
 
@@ -19,7 +20,7 @@ public class Setter {
         Setter.snow = snow;
     }
 
-    public static Image getTree() {
+    public static TREE getTree() {
         return tree;
     }
 

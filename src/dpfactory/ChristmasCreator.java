@@ -1,10 +1,6 @@
 
 package dpfactory;
-
-/**
- *
- * @author Zryggs
- */
+import javafx.scene.image.ImageView;
 public abstract class ChristmasCreator {
     abstract ChristmasProduct createDesign(String item);
     
