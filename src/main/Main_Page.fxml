@@ -16,11 +16,15 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem fx:id="factory" mnemonicParsing="false" text="New Christmas Tree" />
-              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem id="factory" fx:id="factory" mnemonicParsing="false" onAction="#setMenu" text="New Christmas Tree" />
+              <MenuItem id="close" fx:id="close" mnemonicParsing="false" onAction="#setMenu" text="Close" />
             </items>
           </Menu>
-          <Menu fx:id="music" mnemonicParsing="false" text="Play Music" />
+          <Menu mnemonicParsing="false" text="Music">
+               <items>
+                  <MenuItem id="fmusic" fx:id="fmusic" mnemonicParsing="false" onAction="#setMenu" text="Pause Music" />
+                  <MenuItem id="fskip" fx:id="fskip" mnemonicParsing="false" onAction="#setMenu" text="Play Next Music" />
+               </items></Menu>
         </menus>
       </MenuBar>
       <AnchorPane id="menubar" fx:id="bar" layoutY="25.0" prefHeight="576.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="824.0" AnchorPane.topAnchor="25.0">
