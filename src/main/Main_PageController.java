@@ -5,6 +5,7 @@
  */
 package main;
 
+import dpFacaTon.Sound;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -42,15 +43,15 @@ public class Main_PageController implements Initializable {
     @FXML
     private Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8;
     @FXML
-    private MenuItem factory, fmusic, fskip;
+    private MenuItem factory, fmusic, fskip, close;
 
     //Bawah ni ialah class+library yang akan korang gunakan untuk interact dgn UI
     //Then dari UI tu masuk design pattern korang
     //Adib
     private Template tmp;
     private ArrayList<ImageView> templateImage;
-    @FXML
-    private MenuItem close;
+    
+    private Sound sound;
 
     //Ameer
     @Override
@@ -120,10 +121,10 @@ public class Main_PageController implements Initializable {
                 Platform.exit();
                 break;
             case "fmusic":
-
+                sound.trackSong(fmusic);
                 break;
             case "fskip":
-
+                sound.nextSong();
                 break;
             default:
 
@@ -157,6 +158,7 @@ public class Main_PageController implements Initializable {
     }
 
     private void initFacaTon() {
+        sound = Sound.getInstance();
     }
 
     private void initFactory() {
