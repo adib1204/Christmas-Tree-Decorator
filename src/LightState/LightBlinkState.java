@@ -29,7 +29,10 @@ public class LightBlinkState implements State{
         FillTransition ft = new FillTransition(Duration.millis(1000), circle, Color.BLUE, Color.YELLOW);
         ft.setCycleCount(Integer.MAX_VALUE);
         ft.setAutoReverse(true);
+        lightAnimation.setFt(ft);
         ft.play();
+        
+        lightAnimation.setState(lightAnimation.getLightOff());
         
     }
 }

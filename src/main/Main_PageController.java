@@ -48,7 +48,7 @@ public class Main_PageController implements Initializable {
     //Adib
     private Template tmp;
     private ArrayList <ImageView> templateImage;
-      
+    LightAnimation lightAnimation;
     //Ameer
 
     @Override
@@ -83,7 +83,7 @@ public class Main_PageController implements Initializable {
                 tmp.setPresetImage(PRESET.PRESET3);
                 break;
             case "b4":
-                //lightAnimation.clickButton();
+                lightAnimation.clickButton();
                 break;
             case "b5":
                 
@@ -109,7 +109,7 @@ public class Main_PageController implements Initializable {
     }
 
     private void initState() {
-        LightAnimation lightAnimation = new LightAnimation(circle1);
+        lightAnimation = new LightAnimation(circle1);
         //Bagi semua circle animation sama
         circle2.fillProperty().bind(circle1.fillProperty());
         circle3.fillProperty().bind(circle1.fillProperty());

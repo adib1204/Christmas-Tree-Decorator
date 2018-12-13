@@ -14,23 +14,30 @@ import javafx.util.Duration;
  *
  * @author FiQa
  */
-public class LightOffState implements State{
-    
+public class LightOffState implements State {
+
     Circle circle;
     LightAnimation lightAnimation;
-    
-    public LightOffState(Circle circle, LightAnimation lightAnimation){
+
+    public LightOffState(Circle circle, LightAnimation lightAnimation) {
         this.circle = circle;
         this.lightAnimation = lightAnimation;
     }
-    public void clickButton(){
-//        FillTransition ft = lightAnimation.getFt();
-//        //ft.stop();
-//        circle.setFill(Color.BLACK
 
-        FillTransition ft = new FillTransition(Duration.millis(1000), circle, Color.BLACK, Color.BLACK);
-        ft.setCycleCount(Integer.MAX_VALUE);
-        ft.setAutoReverse(true);
-        ft.play();
+    public void clickButton() {
+
+        try {
+            FillTransition ft = lightAnimation.getFt();
+            ft.stop();
+        } catch (NullPointerException e) {
+        }
+
+        circle.setFill(Color.BLACK);
+        lightAnimation.setState(lightAnimation.getLightOn());
+
+//        FillTransition ft = new FillTransition(Duration.millis(1000), circle, Color.BLACK, Color.BLACK);
+//        ft.setCycleCount(Integer.MAX_VALUE);
+//        ft.setAutoReverse(true);
+//        ft.play();
     }
 }

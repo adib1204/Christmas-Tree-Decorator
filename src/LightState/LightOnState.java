@@ -5,6 +5,8 @@
  */
 package LightState;
 
+import javafx.animation.FillTransition;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 /**
@@ -22,5 +24,9 @@ public class LightOnState implements State{
     }
     public void clickButton(){
         
+        //FillTransition ft = lightAnimation.getFt();
+        //ft.stop();
+        circle.setFill(Color.WHITE);
+        lightAnimation.setState(lightAnimation.getLightBlink());
     }
 }
