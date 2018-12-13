@@ -32,6 +32,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import dpState.LightAnimation;
+import dpfactory.*;
 
 public class Main_PageController implements Initializable {
 
@@ -55,7 +56,8 @@ public class Main_PageController implements Initializable {
     private ArrayList<ImageView> templateImage;
     
     private Sound sound;
-    LightAnimation lightAnimation;
+    private LightAnimation lightAnimation;
+    private ChristmasCreator background, tree;
     //Ameer
 
     //Ameer
@@ -111,7 +113,10 @@ public class Main_PageController implements Initializable {
         switch (source) {
             case "factory":
                 setNewWindow();
-
+                ChristmasProduct gambarBG = background.orderDesign(Setter.getId());
+                ChristmasProduct gambarTR = tree.orderDesign(Setter.getTree().toString());
+                gambarBG.setImage(bg);
+                gambarTR.setImage(pokok);
                 break;
             case "close":
                 Platform.exit();
@@ -138,7 +143,7 @@ public class Main_PageController implements Initializable {
         stage.setMaximized(false);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("New Christmas Tree");
-        stage.show();
+        stage.showAndWait();
     }
 
     private void initTemplate() {
@@ -182,6 +187,8 @@ public class Main_PageController implements Initializable {
     }
 
     private void initFactory() {
+        background = new BackgroundCreator();
+        tree = new PokokCreator();
     }
 
 }

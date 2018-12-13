@@ -95,7 +95,7 @@ public class Selection_PageController implements Initializable {
     private void onClick(ActionEvent event) {
         Setter.setId(prev.getId());
         Setter.setSnow(snowing);
-        Setter.setTree(tree.getTreeImage());
+        Setter.setTree(tree);
         
         Button btn = (Button) event.getSource();
         Stage stage = (Stage) btn.getScene().getWindow();
