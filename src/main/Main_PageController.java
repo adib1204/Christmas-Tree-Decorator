@@ -22,6 +22,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import res.enumfile.TREE;
 
+import LightState.LightAnimation;
+
 public class Main_PageController implements Initializable {
 
     @FXML
@@ -47,11 +49,7 @@ public class Main_PageController implements Initializable {
     @FXML
     private Label lb1;
     @FXML
-    private StackPane PaneLampu;
-    @FXML
-    private Circle circleBesar;
-    @FXML
-    private Circle circleKecik;
+    private Circle circle;
     @FXML
     private Menu music;
     @FXML
@@ -59,6 +57,8 @@ public class Main_PageController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        
+        LightAnimation lightAnimation = new LightAnimation(circle);
         Button gbtn[] = {b1,b2};
         mpm = new Main_PageModel();
         mpm.createCircle(bg);
@@ -133,6 +133,12 @@ public class Main_PageController implements Initializable {
                 Button b = new Button("pos");
                 System.out.println(bg.getId());
                 bg.getChildren().add(b);
+                
+            case "b4":
+                LightAnimation lightAnimation = new LightAnimation(circle);
+                lightAnimation.clickButton();
+                break;
+                
             case "b5":
                 tukarPokok();
                 break;
@@ -142,5 +148,10 @@ public class Main_PageController implements Initializable {
             default:
                 throw new AssertionError();
         }
+    }
+
+    @FXML
+    private void animation(ActionEvent event) {
+        
     }
 }
