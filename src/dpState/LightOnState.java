@@ -26,7 +26,7 @@ public class LightOnState implements State{
         
         //FillTransition ft = lightAnimation.getFt();
         //ft.stop();
-        circle.setFill(Color.WHITE);
+        circle.setFill(Color.LIGHTBLUE);
         lightAnimation.setState(lightAnimation.getLightBlink());
     }
 }

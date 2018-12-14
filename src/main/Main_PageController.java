@@ -43,8 +43,6 @@ public class Main_PageController implements Initializable {
     @FXML
     private ImageView pokok, tongkat, ribbon, ornament, olaf, gift, star;
     @FXML
-    private Label lb2, lb1;
-    @FXML
     private Circle circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8;
     @FXML
     private MenuItem factory, fmusic, fskip, close;
@@ -70,14 +68,6 @@ public class Main_PageController implements Initializable {
         initStrategy();
         initFacaTon();
         initFactory();
-    }
-
-    @FXML
-    private void showposition(MouseEvent event) {
-        String x = Double.toString(event.getX());
-        String y = Double.toString(event.getY());
-        lb1.setText("X: " + x);
-        lb2.setText("Y: " + y);
     }
 
     @FXML
