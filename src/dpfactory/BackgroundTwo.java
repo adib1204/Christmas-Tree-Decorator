@@ -1,11 +1,19 @@
 package dpfactory;
 
-/**
- *
- * @author Zryggs
- */
+import javafx.scene.Node;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import res.Index.*;
 public class BackgroundTwo extends ChristmasProduct{
-    public BackgroundTwo(){
-        design = "ImageBackground 02";
+    private String id;
+    public BackgroundTwo(String id){
+        this.id = id;
+    }
+
+    @Override
+    public void setImage(Node pane) {
+        AnchorPane ap = (AnchorPane) pane;
+        ap.setId(id);
     }
 }

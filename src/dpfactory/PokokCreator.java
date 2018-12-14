@@ -1,19 +1,19 @@
 package dpfactory;
 
-/**
- *
- * @author Zryggs
- */
+import javafx.scene.image.Image;
+import res.Index.*;
+
 public class PokokCreator extends ChristmasCreator {
+    
+    
+
     @Override
-    ChristmasProduct createDesign(String item){
-        switch (item) {
-            case "pk01":
-                return new PokokOne();
-            case "pk02":
-                return new PokokTwo();
-            case "pk03":
-                return new PokokThree();
+    ChristmasProduct createDesign(String tree) {
+        switch (tree) {
+            case "TREE1":
+                return new PokokOne(TREE.TREE1);
+            case "TREE2":
+                return new PokokTwo(TREE.TREE2);
             default:
                 return null;
         }

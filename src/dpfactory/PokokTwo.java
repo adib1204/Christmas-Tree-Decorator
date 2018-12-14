@@ -1,16 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dpfactory;
 
-/**
- *
- * @author Zryggs
- */
+import javafx.scene.Node;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import res.Index.*;
+
 public class PokokTwo extends ChristmasProduct{
-    public PokokTwo(){
-        design = "ImagePokok 02";
+    private TREE tree;
+    public PokokTwo(TREE tree){
+        this.tree = tree;
+    }
+    
+    @Override
+    public void setImage(Node pane) {
+        ImageView iv = (ImageView) pane;
+        iv.setImage(tree.getTreeImage());
     }
 }

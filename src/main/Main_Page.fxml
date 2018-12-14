@@ -29,6 +29,7 @@
       </MenuBar>
       <AnchorPane id="menubar" fx:id="bar" layoutY="25.0" prefHeight="576.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="824.0" AnchorPane.topAnchor="25.0">
          <children>
+
             <Button id="b1" fx:id="b1" layoutX="15.0" layoutY="37.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Preset 1" />
             <Button id="b2" fx:id="b2" layoutX="15.0" layoutY="97.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Preset 2" />
             <Button id="b3" fx:id="b3" layoutX="15.0" layoutY="160.0" mnemonicParsing="false" onAction="#click" prefHeight="40.0" prefWidth="170.0" text="Preset 3" />
@@ -54,14 +55,14 @@
                <image>
                   <Image url="@../res/img/olaf.jpg" />
                </image></ImageView>
-            <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="72.0" layoutY="72.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
-            <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="144.0" layoutY="144.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
-            <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="216.0" layoutY="72.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
-            <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="288.0" layoutY="144.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
-            <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="536.0" layoutY="144.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
-            <Circle fx:id="circle6" fill="DODGERBLUE" layoutX="608.0" layoutY="72.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
-            <Circle fx:id="circle7" fill="DODGERBLUE" layoutX="680.0" layoutY="144.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
-            <Circle fx:id="circle8" fill="DODGERBLUE" layoutX="752.0" layoutY="72.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: RED;" />
+            <Circle fx:id="circle1" layoutX="72.0" layoutY="72.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle2" layoutX="144.0" layoutY="144.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle3" layoutX="216.0" layoutY="72.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle4" layoutX="288.0" layoutY="144.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle5" layoutX="536.0" layoutY="144.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle6" layoutX="608.0" layoutY="72.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle7" layoutX="680.0" layoutY="144.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle8" layoutX="749.0" layoutY="69.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
