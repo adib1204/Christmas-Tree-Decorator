@@ -29,7 +29,7 @@ public class LightBlink2State implements State{
         FillTransition ft = lightAnimation.getFt();
         ft.stop();
             
-        ft = new FillTransition(Duration.millis(500), circle, Color.RED, Color.BEIGE);
+        ft = new FillTransition(Duration.millis(250), circle, Color.RED, Color.BEIGE);
         ft.setCycleCount(Integer.MAX_VALUE);
         ft.setAutoReverse(true);
         lightAnimation.setFt(ft);

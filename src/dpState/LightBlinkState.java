@@ -26,7 +26,7 @@ public class LightBlinkState implements State{
     }
     public void clickButton(){
         
-        FillTransition ft = new FillTransition(Duration.millis(1000), circle, Color.RED, Color.BEIGE);
+        FillTransition ft = new FillTransition(Duration.millis(500), circle, Color.RED, Color.BEIGE);
         ft.setCycleCount(Integer.MAX_VALUE);
         ft.setAutoReverse(true);
         lightAnimation.setFt(ft);

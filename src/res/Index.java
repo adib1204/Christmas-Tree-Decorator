@@ -30,8 +30,7 @@ public class Index {
                 "res/img/ornament1.png",
                 "res/img/gift1.png",
                 "res/img/reindeer.jpg",
-                "res/img/reindeer_walking.gif",
-                Color.GREEN
+                "res/img/reindeer_walking.gif"
                 ),
         PRESET2(
                 "res/img/star.png",
@@ -40,8 +39,7 @@ public class Index {
                 "res/img/ornament2.png",
                 "res/img/gift2.png",
                 "res/img/santa.png",
-                "res/img/santa_walk.gif",
-                Color.DARKGREEN
+                "res/img/santa_walk.gif"
                 ),
         PRESET3(
                 "res/img/star.png",
@@ -50,17 +48,16 @@ public class Index {
                 "res/img/ornament3.png",
                 "res/img/gift3.png",
                 "res/img/snowman.png",
-                "res/img/snowman.png",
-                Color.FORESTGREEN
+                "res/img/snowman.png"
                 );
         
         private final Image starImage, tongkatImage, ribbonImage, ornamentImage, 
                 giftImage, standImage, walkImage;
         private ArrayList<Image> imageArray = new ArrayList<>();
-        private final Paint color;
+        private final Color color;
         private PRESET(String starPath, String tongkatPath, String ribbonPath, 
                 String ornamentPath, String giftPath, String standPath, 
-                String walkPath, Paint color) {
+                String walkPath) {
                 starImage = new Image(starPath);
                 tongkatImage = new Image(tongkatPath);
                 ribbonImage = new Image(ribbonPath);
@@ -77,7 +74,7 @@ public class Index {
                 imageArray.add(standImage);
                 imageArray.add(walkImage);
                 
-                this.color = color;
+                this.color = Color.web("#3A5F0B", 0.5);
         }
         
         public Image getImage(int index){

@@ -131,6 +131,7 @@ public class Main_PageController implements Initializable {
                 gambarBG.setImage(bg);
                 gambarBG.setSnow(bg);
                 gambarTR.setImage(pokok);
+                tmp.clearPreset();
                 break;
             case "close":
                 Platform.exit();
