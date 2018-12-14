@@ -5,7 +5,7 @@
  */
 package main;
 
-import dpFacaTon.Sound;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -19,20 +19,20 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
-
-import res.Index.*;
-import dptemplate.Template;
 import java.io.IOException;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import res.Index.*;
 import dpState.LightAnimation;
 import dpfactory.*;
+import dpFacaTon.Sound;
+import dptemplate.Template;
+import dpStrategy.*;
 
 public class Main_PageController implements Initializable {
 
@@ -49,18 +49,20 @@ public class Main_PageController implements Initializable {
     @FXML
     private MenuItem factory, fmusic, fskip, close;
 
-    //Bawah ni ialah class+library yang akan korang gunakan untuk interact dgn UI
-    //Then dari UI tu masuk design pattern korang
     //Adib
     private Template tmp;
     private ArrayList<ImageView> templateImage;
-    
+    private PRESET preset=PRESET.PRESET1;
+    //Ratu
     private Sound sound;
+    //Afiqah
     private LightAnimation lightAnimation;
+    //Ameer
     private ChristmasCreator background, tree;
-    //Ameer
+    //Chempaka
+    private Avatar reindeer, santa, snowman;
+    private boolean standing;
 
-    //Ameer
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initTemplate();
@@ -84,19 +86,25 @@ public class Main_PageController implements Initializable {
         String src = buttonSource.getId();
         switch (src) {
             case "b1":
-                tmp.setPresetImage(PRESET.PRESET1);
+                preset = PRESET.PRESET1;
+                tmp.setPresetImage(preset);
+                standing=true;
                 break;
             case "b2":
-                tmp.setPresetImage(PRESET.PRESET2);
+                preset = PRESET.PRESET2;
+                tmp.setPresetImage(preset);
+                standing=true;
                 break;
             case "b3":
-                tmp.setPresetImage(PRESET.PRESET3);
+                preset = PRESET.PRESET3;
+                tmp.setPresetImage(preset);
+                standing=true;
                 break;
             case "b4":
                 lightAnimation.clickButton();
                 break;
             case "b5":
-
+                chooseStrategy();
                 break;
             case "b6":
                 tmp.clearPreset();
@@ -104,6 +112,21 @@ public class Main_PageController implements Initializable {
             default:
             //throw new AssertionError();
         }
+    }
+    private void chooseStrategy() {
+        switch (preset) {
+            case PRESET1:
+                reindeer.performMove(standing);
+                break;
+            case PRESET2:
+                santa.performMove(standing);
+                break;
+            case PRESET3:
+                snowman.performMove(standing);
+            default:
+        }
+        
+        standing = !standing;
     }
 
     @FXML
@@ -116,6 +139,7 @@ public class Main_PageController implements Initializable {
                 ChristmasProduct gambarBG = background.orderDesign(Setter.getId());
                 ChristmasProduct gambarTR = tree.orderDesign(Setter.getTree().toString());
                 gambarBG.setImage(bg);
+                gambarBG.setSnow(bg);
                 gambarTR.setImage(pokok);
                 break;
             case "close":
@@ -147,21 +171,27 @@ public class Main_PageController implements Initializable {
     }
 
     private void initTemplate() {
-        //Add element/component of the preset into the array
+        //Add element/component of the imageView into the array
         templateImage = new ArrayList<>();
         templateImage.add(star);
         templateImage.add(tongkat);
         templateImage.add(ribbon);
         templateImage.add(ornament);
         templateImage.add(gift);
+        templateImage.add(olaf);
         
-        tmp = new Template(templateImage, circle1);
+        //bind visibility of the button
+        b4.visibleProperty().bind(b6.visibleProperty());
+        b5.visibleProperty().bind(b6.visibleProperty());
+        
+        tmp = new Template(templateImage, circle1, b6);
+        //Hide all first
+        tmp.clearPreset();
     }
 
     private void initState() {
         lightAnimation = new LightAnimation(circle1);
         //Bagi semua circle animation sama
-        
         circle2.fillProperty().bind(circle1.fillProperty());
         circle3.fillProperty().bind(circle1.fillProperty());
         circle4.fillProperty().bind(circle1.fillProperty());
@@ -180,6 +210,9 @@ public class Main_PageController implements Initializable {
     }
 
     private void initStrategy() {
+        reindeer = new Reindeer(olaf);
+        santa = new Santa(olaf);
+        snowman = new Snowman(olaf);
     }
 
     private void initFacaTon() {
@@ -190,5 +223,7 @@ public class Main_PageController implements Initializable {
         background = new BackgroundCreator();
         tree = new PokokCreator();
     }
+
+    
 
 }

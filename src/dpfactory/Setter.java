@@ -4,9 +4,9 @@ import javafx.scene.image.Image;
 import res.Index.TREE;
 
 public class Setter {
-    private static TREE tree;
-    private static String id;
-    private static boolean snow;
+    private static TREE tree = TREE.TREE1;
+    private static String id = "bg1";
+    private static boolean snow = false;
 
     public static void setTree(TREE tree) {
         Setter.tree = tree;

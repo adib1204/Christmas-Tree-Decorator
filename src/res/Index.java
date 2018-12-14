@@ -6,27 +6,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
 public class Index {
-
-    public enum BACKGROUND {
-        BG1("res/img/bg1.png"),
-        BG2("res/img/bg2.png"),
-        BG3("res/img/bg3.png");
-
-        private final Image bgImage;
-
-        private BACKGROUND(String filePath) {
-            bgImage = new Image(filePath);
-        }
-
-        public Image getBackgroundImage() {
-            return bgImage;
-        }
-    }
     
     public enum TREE {
         TREE1("res/img/tree1.png"),
-        TREE2("res/img/tree2.png"),
-        TREE3("res/img/tree3.png");
+        TREE2("res/img/tree2.png");
         
         private final Image treeImage;
 
@@ -46,6 +29,8 @@ public class Index {
                 "res/img/ribbon1.png",
                 "res/img/ornament1.png",
                 "res/img/gift1.png",
+                "res/img/reindeer.jpg",
+                "res/img/reindeer_walking.gif",
                 Color.GREEN
                 ),
         PRESET2(
@@ -54,6 +39,8 @@ public class Index {
                 "res/img/ribbon2.png",
                 "res/img/ornament2.png",
                 "res/img/gift2.png",
+                "res/img/santa.png",
+                "res/img/santa_walk.gif",
                 Color.DARKGREEN
                 ),
         PRESET3(
@@ -62,25 +49,33 @@ public class Index {
                 "res/img/ribbon3.png",
                 "res/img/ornament3.png",
                 "res/img/gift3.png",
+                "res/img/snowman.png",
+                "res/img/snowman.png",
                 Color.FORESTGREEN
                 );
         
-        private final Image starImage, tongkatImage, ribbonImage, ornamentImage, giftImage;
+        private final Image starImage, tongkatImage, ribbonImage, ornamentImage, 
+                giftImage, standImage, walkImage;
         private ArrayList<Image> imageArray = new ArrayList<>();
         private final Paint color;
         private PRESET(String starPath, String tongkatPath, String ribbonPath, 
-                String ornamentPath, String giftPath, Paint color) {
+                String ornamentPath, String giftPath, String standPath, 
+                String walkPath, Paint color) {
                 starImage = new Image(starPath);
                 tongkatImage = new Image(tongkatPath);
                 ribbonImage = new Image(ribbonPath);
                 ornamentImage = new Image(ornamentPath);
-                giftImage = new Image (giftPath);
+                giftImage = new Image(giftPath);
+                standImage = new Image(standPath);
+                walkImage = new Image(walkPath);
                 
                 imageArray.add(starImage);
                 imageArray.add(tongkatImage);
                 imageArray.add(ribbonImage);
                 imageArray.add(ornamentImage);
                 imageArray.add(giftImage);
+                imageArray.add(standImage);
+                imageArray.add(walkImage);
                 
                 this.color = color;
         }

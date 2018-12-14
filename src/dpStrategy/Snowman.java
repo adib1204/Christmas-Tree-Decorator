@@ -5,17 +5,30 @@
  */
 package dpStrategy;
 
-/**
- *
- * @author Chempaka Seri
- */
-public class Snowman extends Character{
-        public Snowman(){
-                standBehaviour = new NoStand();
-                jumpBehaviour = new NoJump();
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import res.Index;
+
+public class Snowman implements Avatar{
+    
+    private final ImageView iv;
+    private final Image stand = Index.PRESET.PRESET3.getImage(5);
+    private final Image walk = Index.PRESET.PRESET3.getImage(6);
+    MoveBehaviour walking, standing;
+    public Snowman(ImageView iv){
+        this.iv = iv;
+        walking = new CanWalk();
+        standing = new NoWalk();
         }
+
+    @Override
+    public void performMove(boolean standing) {
+        if(standing){
+            walking.move(iv, walk);
+        }
+        else{
+            walking.move(iv, stand);
+        }
+    }
         
-        public void display(){
-                System.out.println("I'm a snowman");
-        }
 }

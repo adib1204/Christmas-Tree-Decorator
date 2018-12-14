@@ -9,6 +9,14 @@ import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
 public class Snow {
+    private static Snow snow;
+    private Snow(){
+    }
+    
+    public static Snow getSnow(){
+        if(snow==null) snow = new Snow();
+        return snow;
+    }
 
     private Random random = new Random();
 
@@ -34,7 +42,9 @@ public class Snow {
         tt.setToY(576); //Background height = 576
         tt.setToX(random.nextDouble() * c.getCenterX());
         tt.onFinishedProperty().setValue(e -> {
-            Raining(c, bg);
+            if(Setter.isSnow()){
+                Raining(c, bg);
+            }
         });
         Animation an = tt;
         an.play();

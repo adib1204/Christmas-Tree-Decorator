@@ -1,9 +1,9 @@
 package dpfactory;
 
-import javafx.scene.image.Image;
 import res.Index.*;
 
 public class BackgroundCreator extends ChristmasCreator {
+    private boolean isSnowing;
     @Override
     ChristmasProduct createDesign(String id){
         ChristmasProduct pr;

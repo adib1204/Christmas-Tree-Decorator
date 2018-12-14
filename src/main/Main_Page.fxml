@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 
-<AnchorPane prefHeight="576.0" prefWidth="1024.0" stylesheets="@../res/Decorate.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
+<AnchorPane prefHeight="576.0" prefWidth="1024.0" stylesheets="@../res/Decorate.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main_PageController">
    <children>
       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1024.0" style="-fx-background-color: #f3f9fb;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -46,15 +46,12 @@
                <image>
                   <Image url="@../res/img/tree1.png" />
                </image></ImageView>
-            <ImageView fx:id="star" fitHeight="60.0" layoutX="381.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="star" fitHeight="60.0" layoutX="381.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="tongkat" fitHeight="45.0" layoutX="390.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="ribbon" fitHeight="40.0" layoutX="393.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="ornament" fitHeight="40.0" layoutX="397.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="gift" fitHeight="130.0" layoutX="249.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" />
-            <ImageView fx:id="olaf" fitHeight="232.0" fitWidth="148.0" layoutX="676.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <image>
-                  <Image url="@../res/img/olaf.jpg" />
-               </image></ImageView>
+            <ImageView fx:id="olaf" fitHeight="269.0" fitWidth="270.0" layoutX="676.0" layoutY="319.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Circle fx:id="circle1" layoutX="72.0" layoutY="72.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="circle2" layoutX="144.0" layoutY="144.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="circle3" layoutX="216.0" layoutY="72.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
